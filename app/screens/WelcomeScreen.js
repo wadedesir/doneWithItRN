@@ -1,19 +1,19 @@
 import { StyleSheet, Text, View, ImageBackground, Image } from 'react-native';
 
+import Button from '../components/button';
+
 const WelcomeScreen = () => {
   return (
     <View style={styles.container}>
-        <ImageBackground source={require('../assets/background.jpg')} style={styles.background}>
+        <ImageBackground source={require('../assets/background.jpg')} style={styles.background} blurRadius="10">
             <Image source={require('../assets/logo-red.png')} style={styles.logo} />
             <Text style={styles.title}>
                 Sell what You Don't Need
             </Text>
         </ImageBackground>
 
-        <View style={styles.redBox}>
-        </View>
-        <View style={styles.blueBox}>
-        </View>
+        <Button color="primary" text="Login" />
+        <Button color="secondary" text="Register" />
     </View>
   );
 }
@@ -30,23 +30,15 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         position: 'absolute',
     },
-    redBox: {
-        backgroundColor: '#fc5c65',
-        height: 65,
-        width: '100%',
-    },
-    blueBox: {
-        backgroundColor: '#4ECDC4',
-        height: 65,
-        width: '100%',
-    },
     logo: {
         width: 100,
         height: 100,
         top: 100,
     },
     title: {
-        top: 100,
+        top: 120,
+        fontSize: 25,
+        fontWeight: '600',
     }
 });
 

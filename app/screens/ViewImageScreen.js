@@ -1,15 +1,16 @@
 import { StyleSheet, SafeAreaView, Text, View, Image } from 'react-native';
+import {MaterialCommunityIcons} from '@expo/vector-icons';
 
-const ViewImageScreen = () => {
+import colors from '../config/colors';
+
+const ViewImageScreen = (props) => {
   return (
     <View style={styles.container}>
         <SafeAreaView style={styles.safeArea}>
-            <View style={styles.redBox}>
-            </View>
-            <View style={styles.blueBox}>
-            </View>
+            <MaterialCommunityIcons name="close"  style={styles.closeButton} />
+            <MaterialCommunityIcons  name="trash-can-outline" style={styles.trashButton} />
         </SafeAreaView>
-        <Image source={require('../assets/chair.jpg')} style={styles.chair} />
+        <Image source={props.image} style={styles.item} />
     </View>
   );
 }
@@ -28,17 +29,15 @@ const styles = StyleSheet.create({
         position: 'absolute',
         top: 0,
     },
-    redBox: {
-        backgroundColor: '#fc5c65',
-        height: 50,
-        width: 50,
+    closeButton: {
+        fontSize: 35,
+        color: colors.white,
     },
-    blueBox: {
-        backgroundColor: '#4ECDC4',
-        height: 50,
-        width: 50,
+    trashButton: {
+        color: colors.white,
+        fontSize: 35,
     },
-    chair: {
+    item: {
         width: '100%',
         height: '60%',
         resizeMode: 'contain',
