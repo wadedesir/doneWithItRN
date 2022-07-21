@@ -1,18 +1,17 @@
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, Text, TouchableOpacity } from "react-native";
 import colors from "../config/colors";
 
-const Button = (props) => {
+const AppButton = ({title, color}) => {
     return (
-        <View 
-            style={{...styles.container, backgroundColor: props.color == 'primary' ? colors.primary : colors.secondary}}>
-            <Text style={styles.text}>{props.text}</Text>
-        </View>
+        <TouchableOpacity style={{...styles.container, backgroundColor: colors[color]}}>
+            <Text style={styles.text}>{title}</Text>
+        </TouchableOpacity>
     );
 }
 
 const styles = StyleSheet.create({
     container: {
-        width: 320,
+        width: '100%',
         height: 50,
         borderRadius: 25,
         justifyContent: "center",
@@ -27,4 +26,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default Button;
+export default AppButton;

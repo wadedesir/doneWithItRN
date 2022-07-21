@@ -5,11 +5,13 @@ import WelcomeScreen from './app/screens/WelcomeScreen.js';
 import ViewImageScreen from './app/screens/ViewImageScreen.js';
 import ListingDetailsScreen from './app/screens/ListingDetailsScreen.js';
 import Card from './app/components/card.js';
+import MessagesScreen from './app/screens/MessagesScreen.js';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <ViewImageScreen image={require('./app/assets/chair.jpg')}/>
+      <MessagesScreen />
+      {/* <ViewImageScreen image={require('./app/assets/chair.jpg')}/> */}
       {/* <WelcomeScreen /> */}
       {/* <Card image={require('./app/assets/jacket.jpg')} title="Red Jacket for Sale!" subtitle="$100" /> */}
       {/* <ListingDetailsScreen 
@@ -28,5 +30,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#f8f4f4'
   }
 });
