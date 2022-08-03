@@ -10,11 +10,13 @@ const ListingDetailsScreen = (props) => {
             <Text style={styles.title}>{props.title}</Text>
             <Text style={styles.subtitle}>{props.subtitle}</Text>
            
-            <ListItem 
-                image={props.avatar} 
-                title={props.username}
-                subtitle={props.listings}
-            />
+           <View style={styles.listContainer}>
+                <ListItem 
+                    image={props.avatar} 
+                    title={props.username}
+                    subtitle={props.listings}
+                />
+           </View>
         </View>
     )
 }
@@ -38,6 +40,9 @@ const styles = StyleSheet.create({
         fontSize: 20,
         color: colors.secondary
     },
+    listContainer: {
+        marginTop: 40,
+    }
     
 } );
 
