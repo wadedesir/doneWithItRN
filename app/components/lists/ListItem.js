@@ -1,9 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableHighlight } from 'react-native';
 import {Swipeable, GestureHandlerRootView} from 'react-native-gesture-handler';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-import Colors from '../config/colors';
-import AppText from './AppText';
+import Colors from '../../config/colors';
+import AppText from '../AppText';
 
 function ListItem(props) {
     return (
@@ -17,9 +18,10 @@ function ListItem(props) {
                     <View style={styles.container}>
                         <Image source={props.image} style={styles.avatar} />
                         <View style={styles.textContainer}>
-                            <AppText style={styles.username}>{props.title}</AppText>
-                            <AppText style={styles.listings}>{props.subtitle} Listings</AppText>
+                            <AppText numberOfLines={1} style={styles.username}>{props.title}</AppText>
+                            <AppText numberOfLines={1} style={styles.listings}>{props.subtitle} Listings</AppText>
                         </View>
+                        {props.chevron ? <MaterialCommunityIcons style={styles.chevron} name="chevron-right" size={30} color={Colors.medium} /> : null}
                     </View>
                 </TouchableHighlight>
             </Swipeable>
@@ -47,6 +49,7 @@ const styles = StyleSheet.create({
     textContainer: {
         marginTop: 10,
         marginLeft: 10,
+        flex: 1
     },
     username: {
         fontSize: 18,
@@ -56,5 +59,9 @@ const styles = StyleSheet.create({
         marginTop: 7,
         fontSize: 15,
         color: Colors.medium
+    },
+    chevron: {
+        paddingRight: 20,
     }
+
 })

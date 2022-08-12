@@ -8,8 +8,8 @@ const Card = (props) => {
         <View style={styles.container}>
             <Image source={props.image} style={styles.image} />
             <View style={styles.textContainer}>
-                <AppText style={styles.title}>{props.title}</AppText>
-                <AppText style={styles.subtitle}>{props.subtitle}</AppText>
+                <AppText numberOfLines={1} style={styles.title}>{props.title}</AppText>
+                <AppText numberOfLines={1} style={styles.subtitle}>{props.subtitle}</AppText>
             </View>
         </View>
     )

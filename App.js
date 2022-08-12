@@ -13,7 +13,9 @@ import ListingsScreen from './app/screens/ListingsScreen.js';
 import AppTextInput from './app/components/AppTextInput.js';
 import AppPicker from './app/components/AppPicker.js';
 import Colors from './app/config/colors.js';
-import LoginScreen from './app/components/LoginScreen.js';
+import LoginScreen from './app/screens/LoginScreen.js';
+import RegisterScreen from './app/screens/RegisterScreen.js';
+import ListingEditScreen from './app/screens/ListingEditScreen.js';
 
 let categories = [
   { id: 1, label: 'Cars' },
@@ -25,7 +27,10 @@ export default function App() {
   const [selectedItem, setSelectedItem] = React.useState(categories[0]);
 
   return (
-    <LoginScreen />
+    // <ListingEditScreen />
+    // <RegisterScreen />
+
+    // <LoginScreen />
     // <Screen style={styles.container}>
     //   {/* <AppTextInput icon="email" color={Colors.primary} placeholder='Username'/>
     //   <AppPicker 
@@ -37,18 +42,18 @@ export default function App() {
     //   /> */}
     //   {/* <ListingsScreen></ListingsScreen> */}
     //   {/* <MyAccountScreen /> */}
-    //   {/* <MessagesScreen /> */}
+      <MessagesScreen /> 
     //   {/* <ViewImageScreen image={require('./app/assets/chair.jpg')}/> */}
     //   {/* <WelcomeScreen /> */}
-    //   {/* <Card image={require('./app/assets/jacket.jpg')} title="Red Jacket for Sale!" subtitle="$100" /> */}
-    //   {/* <ListingDetailsScreen 
-    //     image={require('./app/assets/jacket.jpg')} 
-    //     title="Red Jacket for Sale!" 
-    //     subtitle="$100"
-    //     username="Mosh Hamedani"
-    //     avatar={require('./app/assets/mosh.jpg')}
-    //     listings={5}
-    //   /> */}
+      //  <Card image={require('./app/assets/jacket.jpg')} title="Red Jacket for Sale!" subtitle="$100" /> 
+      // <ListingDetailsScreen 
+      //   image={require('./app/assets/jacket.jpg')} 
+      //   title="Red Jacket for Sale!" 
+      //   subtitle="$100"
+      //   username="Mosh Hamedani"
+      //   avatar={require('./app/assets/mosh.jpg')}
+      //   listings={5}
+      // /> 
     //   <StatusBar style="dark-content" />
     // </Screen>
   );

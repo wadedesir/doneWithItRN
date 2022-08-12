@@ -8,5 +8,11 @@ export default {
     light: '#f9f4f4',
     danger: '#ff5252',
     yellow: '#ffe66d',
-
+    floorLamp: "#fc5c65",
+    car: '#fd9644',
+    camera: '#fed330',
+    cards: '#26de81',
+    shoeHeel:  '#2bcbba',
+    basketball: '#45aaf2',
+    headphones: '#4b7bec',
 }
